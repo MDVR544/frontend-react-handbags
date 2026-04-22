@@ -4,6 +4,10 @@ import bag_1 from "./assets/bag_1.png";
 import bag_2 from "./assets/bag_2.png";
 import bag_3 from "./assets/bag_3.png";
 import bag_4 from "./assets/bag_4.png";
+import Product from "./Components/Product/Product.jsx";
+import brand from "./assets/brand.png";
+import designers from "./assets/our_story.png";
+import Tile from "./Components/Tile/Tile.jsx";
 
 
 function App() {
@@ -28,34 +32,65 @@ function App() {
         </nav>
 
         <main>
-          <article>
-            <span>Best seller</span>
-            <img src={bag_1} alt="Handy bag"/>
-            <p>The handy bag</p>
-            <h4>€400,-</h4>
-          </article>
-
-          <article>
-            <span>Best seller</span>
-            <img src={bag_2} alt="Stylish bag"/>
-            <p>The stylish bag</p>
-            <h4>€250,-</h4>
-          </article>
-
-          <article>
-            <span>Best seller</span>
-            <img src={bag_3} alt="Simple bag"/>
-            <p>The simple bag</p>
-            <h4>€300,-</h4>
-          </article>
-
-          <article>
-            <span>Best seller</span>
-            <img src={bag_4} alt="Trendy bag"/>
-            <p>The trendy bag</p>
-            <h4>€150,-</h4>
-          </article>
+          <Product
+          articleName="Best seller"
+          articleImage={bag_1}
+          articleImageAlt="Handy bag"
+          articleDescription="The handy bag"
+          articlePrice="€400,-"
+          />
+          <Product
+              articleName="Best seller"
+              articleImage={bag_2}
+              articleImageAlt="Stylish bag"
+              articleDescription="The stylish bag"
+              articlePrice="€250,-"
+          />
+          <Product
+              articleName="New collection"
+              articleImage={bag_3}
+              articleImageAlt="Simple bag"
+              articleDescription="The Simple bag"
+              articlePrice="€300,-"
+          />
+          <Product
+              articleName="New collection"
+              articleImage={bag_4}
+              articleImageAlt="Trendy bag"
+              articleDescription="The Trendy bag"
+              articlePrice="€150,-"
+          />
         </main>
+        <footer>
+          <Tile header="The brand">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate debitis doloribus dolorum
+              excepturi, fuga hic id incidunt inventore ipsa necessitatibus odit, pariatur praesentium quo sed similique
+              temporibus veniam veritatis!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate debitis doloribus dolorum
+            excepturi, fuga hic id incidunt inventore ipsa necessitatibus odit, pariatur praesentium quo sed similique
+            temporibus veniam veritatis!
+          </p>
+            </Tile>
+
+          <Tile>
+            <img src={brand} alt="Image of brand"/>
+          </Tile>
+
+          <Tile>
+            <img src={designers} alt="Image of designers"/>
+          </Tile>
+
+          <Tile header="Our story">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda incidunt quibusdam quisquam quod sed.
+              Aliquam aliquid aspernatur autem beatae consequatur dicta, distinctio earum eius fugiat fugit, illum incidunt
+              ipsum molestiae natus, necessitatibus obcaecati officiis possimus praesentium quo sit temporibus veritatis.
+            </p>
+          </Tile>
+        </footer>
       </>
         )
 }
